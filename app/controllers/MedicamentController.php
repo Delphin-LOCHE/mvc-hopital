@@ -17,5 +17,7 @@ class MedicamentController extends Controller{
         $prix = $_POST['prix'];
         $medicament = new Medicament();
         $medicament->createMedicament($design, $desc, $prix);
+
+        header("Location: ?page=liste");
     }
 }
